@@ -133,8 +133,7 @@
 }
 @media(max-width:1300px){
     .page-header{
-        padding-top: 30px;
-        color: var(--bgOrange);
+        padding-top: 10px;
         text-align: center;
         font-size: 40px;
     }
@@ -171,15 +170,6 @@
     #project2{
         margin-left: 0;
     }
-    #project4{
-        margin-left: 0;
-    }
-    .project-skill-container{
-        width:100%;
-    }
-    .project-skill{
-        width:35px
-    }
     .project-card:hover .project-number{
         display: none;
     }
@@ -187,3 +177,4 @@
         scale: 0.55;
     }
 }
+
