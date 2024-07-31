@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:"Be Vietnam Pro", sans-serif;
+    
+}
+#wrapper{
+    height: 100vh;
+
+}
+
+.project-section{
+    background-color: rgb(211, 234, 234);
+}
+.page-header{
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 500px;
+    padding-bottom: 20px;
+}
+.project-container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+.project-card{
+    width: 90%;
+    height: 450px;
+    background-size: cover;
+    box-shadow: 0px 0px 40px #1f1f1f;
+    position: relative;
+}
+.project-card::after{
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+}
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.project-card:hover::before{
+    transform: scaleX(1);
+    /* scale x expands the thing in x axis */
+}
+.project-number{
+    position: absolute;
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    z-index: 10;
+    display: none;
+   
+}
+.project-card:hover .project-number{
+    display: block;
+    /* we can also use opacity option to be 1 or 0 */
+}
+.project-number-right{
+    right: -35px;
+    top: -30px;
+}
+.project-number-left{
+    left: -35px;
+    top: -30px;
+}
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    z-index: 5;
+    bottom: 20%;
+    gap: 1em;
+    transition: all 0.4s;
+}
+.project-content-left{
+    left:10%;
+}
+.project-content-right{
+    left:10%;
+}
+.project-skill-container{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.project-skill{
+    width: 40px;
+}
+.project-heading{
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.project-subheading{
+    font-size: 17px;
+    width: 90%;
+    font-style: italic;
+}
+.project-card:hover .project-content{
+    transform: scale(1.1);
+}
+#project1{
+    background-image: url(./images/vission3.jpg);
+}
+#project2{
+    background-image: url(./images/mission3.jpg);
+    margin-left: 120px;
+}
+@media(max-width:1300px){
+    .page-header{
+        padding-top: 30px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 40px;
+    }
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+    .project-card{
+        width: 100%;
+        height: 300px;
+    }
+    .project-card{
+        background-position: center;
+        background-size: cover;
+    }
+    .project-content{
+        scale : 0.5;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .project-content-left{
+        left: 0;
+    }
+    .project-heading{
+        font-size: 40px;
+        width: 100%;
+    }
+    .project-subheading{
+       width: 100%;
+    }
+    #project2{
+        margin-left: 0;
+    }
+    #project4{
+        margin-left: 0;
+    }
+    .project-skill-container{
+        width:100%;
+    }
+    .project-skill{
+        width:35px
+    }
+    .project-card:hover .project-number{
+        display: none;
+    }
+    .project-card:hover .project-content{
+        scale: 0.55;
+    }
+}
